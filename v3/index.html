@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>MASH BREAKERS — Neo-Arcade Superhuman Sports</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="arcade-shell">
+    <header id="top-bar">
+      <div class="brand">
+        <span class="badge">NEO-ARCADE V3</span>
+        <h1>MASH BREAKERS</h1>
+      </div>
+      <div class="controls-bar">
+        <button id="btn-sound" class="icon-btn" title="사운드 켜기/끄기">🔊 SFX</button>
+        <button id="btn-shake" class="icon-btn" title="화면 흔들림/번쩍임 줄이기">💥 FX: 100%</button>
+        <button id="btn-home" class="icon-btn" title="타이틀로 이동">🏠 TITLE</button>
+      </div>
+    </header>
+
+    <main id="stage-wrap">
+      <canvas id="game-canvas" width="960" height="540"></canvas>
+      <div id="ad-overlay" class="hidden" aria-live="polite">
+        <div class="ad-box">
+          <div class="ad-tag">PORTAL SDK DEMO (Poki / CrazyGames)</div>
+          <h2 id="ad-title">REWARDED AD SIMULATOR</h2>
+          <p id="ad-desc">실제 포털 배포 시 여기서 보상형 광고가 재생됩니다.</p>
+          <div class="ad-bar"><div id="ad-progress"></div></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- PC Key Hint + Mobile Arcade Touch Deck -->
+    <footer id="touch-deck">
+      <button id="pad-left" class="arcade-btn btn-red" data-input="left">
+        <span class="btn-label">MASH L</span>
+        <span class="btn-key">A / ← / Z</span>
+      </button>
+      <button id="pad-action" class="arcade-btn btn-yellow" data-input="action">
+        <span class="btn-label">ACTION!</span>
+        <span class="btn-key">SPACE</span>
+      </button>
+      <button id="pad-right" class="arcade-btn btn-blue" data-input="right">
+        <span class="btn-label">MASH R</span>
+        <span class="btn-key">D / → / X</span>
+      </button>
+    </footer>
+  </div>
+
+  <script src="src/sdk.js"></script>
+  <script src="src/audio.js"></script>
+  <script src="src/juice.js"></script>
+  <script src="src/sprites.js"></script>
+  <script src="src/events.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
