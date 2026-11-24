@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>MASH BREAKERS V5 — PixiJS WebGL + 4-Event Superhuman Cup</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.4.2/dist/pixi.min.js"></script>
+</head>
+<body>
+  <div id="arcade-shell">
+    <header id="top-bar">
+      <div class="brand">
+        <span class="badge">WEBGL V5 · 4-EVENT</span>
+        <h1>MASH BREAKERS</h1>
+      </div>
+      <div class="controls-bar">
+        <button id="btn-bgm" class="icon-btn" title="BGM 켜기/끄기">🎵 BGM</button>
+        <button id="btn-sound" class="icon-btn" title="효과음/보이스 켜기/끄기">🔊 SFX</button>
+        <button id="btn-renda" class="icon-btn" title="RENDA 연타 모니터 표시">📊 RENDA</button>
+        <button id="btn-shake" class="icon-btn" title="화면 흔들림/번쩍임 줄이기">💥 FX: 100%</button>
+        <button id="btn-home" class="icon-btn" title="타이틀로 이동">🏠 TITLE</button>
+      </div>
+    </header>
+
+    <div id="landscape-deck">
+      <aside class="side-wing wing-left">
+        <button id="pad-left" class="arcade-btn btn-red" data-input="left">
+          <span class="btn-label">MASH L</span>
+          <span class="btn-key">A / ← / Z</span>
+        </button>
+      </aside>
+
+      <main id="stage-wrap">
+        <canvas id="game-canvas" width="960" height="540"></canvas>
+        <div id="ad-overlay" class="hidden" aria-live="polite">
+          <div class="ad-box">
+            <div class="ad-tag">PORTAL SDK DEMO (Poki / CrazyGames)</div>
+            <h2 id="ad-title">REWARDED AD SIMULATOR</h2>
+            <p id="ad-desc">실제 포털 배포 시 여기서 보상형 광고가 재생됩니다.</p>
+            <div class="ad-bar"><div id="ad-progress"></div></div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="side-wing wing-right">
+        <button id="pad-right" class="arcade-btn btn-blue" data-input="right">
+          <span class="btn-label">MASH R</span>
+          <span class="btn-key">D / → / X</span>
+        </button>
+        <button id="pad-action" class="arcade-btn btn-yellow" data-input="action">
+          <span class="btn-label">ACTION!</span>
+          <span class="btn-key">SPACE</span>
+        </button>
+      </aside>
+    </div>
+  </div>
+
+  <script src="src/sdk.js"></script>
+  <script src="src/renda.js"></script>
+  <script src="src/audio.js"></script>
+  <script src="src/pixi_fx.js"></script>
+  <script src="src/juice.js"></script>
+  <script src="src/sprites.js"></script>
+  <script src="src/events.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
